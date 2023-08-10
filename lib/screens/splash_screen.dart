@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_spinkit/flutter_spinkit.dart';
 import 'package:simplecalculator/const/colors.dart';
+import 'package:simplecalculator/screens/calculator_screen.dart';
 import 'package:simplecalculator/utils/common_widgets.dart';
 
 class SplashScreen extends StatefulWidget {
@@ -14,10 +15,13 @@ class _SplashScreenState extends State<SplashScreen> {
   @override
   void initState() {
     super.initState();
+    moveToNextScreen();
   }
 
   Future moveToNextScreen() async {
-    await Future.delayed(const Duration(seconds: 3), () {});
+    await Future.delayed(const Duration(seconds: 3), () {
+      gotoWithoutBack(context, const SimpleCalculatorScreen());
+    });
   }
 
   @override
@@ -28,17 +32,13 @@ class _SplashScreenState extends State<SplashScreen> {
           Container(
             height: fullHeight(context),
             width: fullWidth(context),
-            color: red,
+            color: blue,
             child: Center(
-              child: SizedBox(
-                height: 80,
-                width: 200,
-                child: textBold(
-                    color: white,
-                    maxLine: 1,
-                    size: 20,
-                    text: "Simple Calculator"),
-              ),
+              child: textBold(
+                  color: white,
+                  maxLine: 1,
+                  size: 30,
+                  text: "Simple Calculator"),
             ),
           ),
           Positioned(

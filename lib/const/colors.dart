@@ -4,12 +4,12 @@ Color black = const Color(0xFF000000);
 
 Color grey = const Color(0xFF9E9E9E);
 
-Color darkgreen = const Color(0xFF046B3E);
-
-Color lightgreen = const Color(0xFF87C558);
+Color silverGrey = const Color(0xFFF0F2F4);
 
 Color white = const Color(0xFFFFFFFF);
 
 Color red = Colors.red;
+
+Color yellow= Colors.yellow;
 
 Color blue = const Color(0xFF2196F3);
